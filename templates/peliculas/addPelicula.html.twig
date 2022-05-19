@@ -1,0 +1,28 @@
+{% extends './base.html.twig' %}
+{% block body %}
+    <div class="d-flex justify-content-center mt-5 h-100 text-white bg-secondary rounded pb-5">
+        {{form_start(peliculaForm)}}
+        <div style='height: 75px; width: 300px' class="d-flex justify-content-between align-items-center" >
+            <span class="mr-4">Imagen</span></span>
+            {{form_widget(peliculaForm.imagen)}}
+        </div>
+        <div style='height: 75px; width: 300px' class="d-flex justify-content-between align-items-center" >
+            <span class="mr-4">Titulo</span></span>
+            {{form_widget(peliculaForm.nombre)}}
+        </div>
+        <div style='height: 75px; width: 300px' class="d-flex justify-content-between align-items-center" >
+            <span class="mr-4">Estreno</span></span>
+            {{form_widget(peliculaForm.fechaEstreno)}}
+        </div>
+
+        <div style='height: 75px; width: 300px' class="d-flex justify-content-between align-items-center" >
+            <span class="mr-4">Duración</span></span>
+            {{form_widget(peliculaForm.duracion)}}
+        </div>
+        <div class="d-flex justify-content-center align-items-center mt-3">
+            <button class='btn btn-lg -btn-primary' type='submit'>Añadir Pelicula</button>
+        </div>
+        {{form_end(peliculaForm)}}
+    </div>
+
+{% endblock %}

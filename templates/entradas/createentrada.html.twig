@@ -1,0 +1,30 @@
+{% extends './base.html.twig' %}
+{% block body %}
+    <div class="d-flex justify-content-center mt-5 pb-5 bg-secondary rounded text-white">
+        {{form_start(entradaForm)}}        
+        <div style='height: 75px; width: 300px' class="d-flex justify-content-between align-items-center" >
+            <span class="mr-4">Pelicula</span>
+            {{form_widget(entradaForm.nombrePelicula)}}            
+        </div>        
+            <div style='height: 75px; width: 300px; padding-right:33px' class="d-flex justify-content-between align-items-center" style='height: 60px'>
+                <span class="mr-4">Hora</span>
+                {{form_widget(entradaForm.fechaInicio)}}
+            </div>         
+            <div style='height: 75px; width: 300px; padding-right:33px' class="d-flex justify-content-between align-items-center">
+                <span class="mr-4">Hora fin</span>
+                {{form_widget(entradaForm.fechaFin)}}
+            </div>    
+            <div style='height: 75px; width: 300px' class="d-flex justify-content-between align-items-center">
+                <span class="mr-4">Palomitas</span>
+                {{form_widget(entradaForm.bolsaPalomitas)}}
+            </div>        
+            <div style='height: 75px; width: 300px' class="d-flex justify-content-between align-items-center">
+                <span class="mr-4">N. Entradas</span>
+                {{form_widget(entradaForm.numEntradas)}}
+            </div>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                <button class='btn btn-lg -btn-primary' type='submit'>Seleccionar entrada</button>
+            </div>
+        {{form_end(entradaForm)}}
+    </div>
+{% endblock %}

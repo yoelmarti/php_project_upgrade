@@ -1,0 +1,22 @@
+{% extends './base.html.twig' %}
+{% block body %}
+<h2 class="text-center my-3">Mis entradas</h2>
+<div class="d-flex flex-column">
+    {% for entrada in entradas %}
+    <div class="d-flex flex-row card m-2">
+        <div>
+            <img class="" style="width: 240px" src="https://recursospython.com/wp-content/uploads/2014/06/img1.png" alt="">
+        </div>
+        <div class="card-body">
+         <h5 class="card-title">{{entrada.nombrePelicula}}</h5>
+         <p class="card-text">Entradas: {{entrada.numEntradas}}<p>
+         <p class="card-text">Comienzo pelicula: Dia: {{entrada.fechaInicio|date("m/d")}}. Hora:{{entrada.fechaInicio|date("h:i")}}.<p>
+         <p class="card-text">Final pelicula: Dia: {{entrada.fechaFin|date("m/d")}}. Hora: {{entrada.fechaFin|date("h:i")}}.<p>
+         {% if entrada.bolsaPalomitas > 0%}
+            <p class="card-text">🍿 {{entrada.bolsaPalomitas}}<p>
+         {%endif%}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
